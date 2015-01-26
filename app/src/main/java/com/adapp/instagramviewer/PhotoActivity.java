@@ -29,6 +29,7 @@ public class PhotoActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
+        getSupportActionBar().hide();
         fetchPopularPhotos();
     }
 
@@ -61,6 +62,9 @@ public class PhotoActivity extends ActionBarActivity {
                         photo.setImageHeight(photoJson.getJSONObject("images").getJSONObject("standard_resolution").getInt("height"));
                         photo.setImageUrl(photoJson.getJSONObject("images").getJSONObject("standard_resolution").getString("url"));
                         photo.setLikesCount(photoJson.getJSONObject("likes").getInt("count"));
+                        photo.setUsername(photoJson.getJSONObject("user").getString("username"));
+                        photo.setProfilePicture(photoJson.getJSONObject("user").getString("profile_picture"));
+
                         //Log.i("DEBUG", photo.toString());
                         photoList.add(photo);
 

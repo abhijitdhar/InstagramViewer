@@ -6,14 +6,30 @@ package com.adapp.instagramviewer;
 public class InstagramPhoto {
 
     private String username;
+    private String profilePicture;
+    private int postTime;
     private String caption;
     private String imageUrl;
     private int imageHeight;
     private int likesCount;
 
-    public String getUsername() {
-        return username;
+    public String getProfilePicture() {
+        return profilePicture;
     }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
+
+    public int getPostTime() {
+        return postTime;
+    }
+
+    public void setPostTime(int postTime) {
+        this.postTime = postTime;
+    }
+
+    public String getUsername() {  return username;   }
 
     public void setUsername(String username) {
         this.username = username;

@@ -5,20 +5,48 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imgPhoto"
+        android:id="@+id/imgProfile"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
         android:layout_alignParentStart="true"
-        android:adjustViewBounds="true"/>
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/tvUserName"
+        android:layout_toRightOf="@+id/imgProfile"
+        android:paddingLeft="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgPhoto"
+        android:layout_below="@+id/imgProfile"
+        android:adjustViewBounds="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/caption_default_text"
+        android:id="@+id/tvLikes"
+        android:layout_below="@+id/imgPhoto"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/caption_default_text"
         android:id="@+id/tvCaption"
-        android:layout_below="@+id/imgPhoto"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:maxLines="3"
-        android:ellipsize="end"/>
+        android:ellipsize="end"
+        android:layout_below="@+id/tvLikes"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
+
 </RelativeLayout>
