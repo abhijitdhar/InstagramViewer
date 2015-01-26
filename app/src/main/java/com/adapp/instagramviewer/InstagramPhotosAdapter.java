@@ -67,7 +67,8 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
                 .build();
 
         imgProfile.setImageResource(0);
-        Picasso.with(getContext()).load(photo.getProfilePicture()).resize(50, 50).centerCrop().into(imgProfile);
+        //Picasso.with(getContext()).load(photo.getProfilePicture()).resize(50, 50).centerCrop().into(imgProfile);
+        Picasso.with(getContext()).load(photo.getProfilePicture()).resize(50, 50).transform(new CircleTransform()).into(imgProfile);
         //Picasso.with(getContext()).load(photo.getProfilePicture()).fit().transform(transformation).into(imgProfile);
 
         imgPhoto.getLayoutParams().height = photo.getImageHeight();

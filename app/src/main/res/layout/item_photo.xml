@@ -26,7 +26,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/imgPhoto"
         android:layout_below="@+id/imgProfile"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:paddingTop="10dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
