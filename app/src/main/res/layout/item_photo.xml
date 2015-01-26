@@ -19,7 +19,8 @@
         android:text="Small Text"
         android:id="@+id/tvUserName"
         android:layout_toRightOf="@+id/imgProfile"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:gravity="center_horizontal"/>
 
     <ImageView
         android:layout_width="wrap_content"
